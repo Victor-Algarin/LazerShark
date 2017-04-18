@@ -1,0 +1,10 @@
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb

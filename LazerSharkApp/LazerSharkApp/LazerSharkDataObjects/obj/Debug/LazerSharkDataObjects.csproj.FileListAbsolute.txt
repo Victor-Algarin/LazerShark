@@ -1,0 +1,15 @@
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.dll
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.pdb
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.dll
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.pdb
+G:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.dll
+G:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.pdb
+G:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+G:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.dll
+G:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.pdb
+D:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.dll
+D:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\bin\Debug\LazerSharkDataObjects.pdb
+D:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+D:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.dll
+D:\DotNetII\LazerShark\LazerSharkApp\LazerSharkApp\LazerSharkDataObjects\obj\Debug\LazerSharkDataObjects.pdb

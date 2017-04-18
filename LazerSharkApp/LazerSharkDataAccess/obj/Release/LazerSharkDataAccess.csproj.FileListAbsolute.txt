@@ -1,0 +1,28 @@
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.pdb
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.dll
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\Desktop\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.dll
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.pdb
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.dll
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.pdb
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
+F:\DotNetII\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.dll
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.dll
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb
+G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.pdb
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.dll
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb
