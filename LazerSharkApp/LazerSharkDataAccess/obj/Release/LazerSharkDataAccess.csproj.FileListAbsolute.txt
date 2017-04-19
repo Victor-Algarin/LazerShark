@@ -33,3 +33,10 @@ C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerS
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataAccess.pdb
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataAccess\obj\Release\LazerSharkDataAccess.pdb

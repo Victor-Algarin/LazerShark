@@ -43,9 +43,9 @@
         <Button x:Name="btnConfirm" Grid.Column="1" Grid.Row="6" Margin="30 5 100 5"  Content="Confirm" Click="btnConfirm_Click"/>
 
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Height="65" Width="75" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 5 0 0">
-            <Grid.Background>
-                <ImageBrush ImageSource="G:\DotNetII\LazerShark\LazerSharkApp\WpfPresentationLayer\Resources\shark_with_laser_by_carrool-d68jf0w.ico" Stretch="Uniform"/>
-            </Grid.Background>
+            <!--<Grid.Background>
+                <ImageBrush ImageSource=":\DotNetII\LazerShark\LazerSharkApp\WpfPresentationLayer\Resources\shark_with_laser_by_carrool-d68jf0w.ico" Stretch="Uniform"/>
+            </Grid.Background>-->
         </Grid>
         <Label x:Name="lblLazerShark" Grid.ColumnSpan="2" Grid.Row="0" Content="Lazer Shark" FontSize="22" HorizontalAlignment="Center" Background="Transparent" FontFamily="Ravie" BorderBrush="#FFEC2424">
             <Label.Foreground>
