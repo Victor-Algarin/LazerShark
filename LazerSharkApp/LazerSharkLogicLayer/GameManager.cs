@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LazerSharkLogicLayer
 {
-    public class GameManager
+    public class GameManager : LazerSharkLogicLayer.IGameManager
     {
         public List<Game> games = new List<Game>();
         
@@ -147,6 +147,20 @@ namespace LazerSharkLogicLayer
             }
 
             return result;
+        }
+
+
+        public bool CreateGame(Game game)
+        {
+            try
+            {
+                return (GameAccessor.InsertGame(game) == 1);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
     }
 }

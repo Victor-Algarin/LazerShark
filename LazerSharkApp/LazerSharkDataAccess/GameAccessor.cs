@@ -375,5 +375,36 @@ namespace LazerSharkDataAccess
             }
             return count;
         }
+
+        public static int InsertGame(Game game)
+        {
+            int result = 0;
+
+            var conn = DBConnection.GetConnection();
+            var cmdText = @"sp_create_game";
+            var cmd = new SqlCommand(cmdText, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Title", game.Title);
+            cmd.Parameters.AddWithValue("@Description", game.Description);
+            cmd.Parameters.AddWithValue("@Rating", game.Rating);
+            cmd.Parameters.AddWithValue("@MediumID", game.MediumID);
+            cmd.Parameters.AddWithValue("@QuantityAvailable", game.QuantityAvailable);
+            cmd.Parameters.AddWithValue("@Quantity", game.Quantity);
+            cmd.Parameters.AddWithValue("@RentalPrice", game.RentalPrice);
+
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+            return result;
+        }
     }
 }

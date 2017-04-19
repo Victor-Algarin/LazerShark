@@ -395,6 +395,29 @@ AS
 	END
 GO
 
+print '' print '**** Creating sp_create_game ****'
+GO
+CREATE PROCEDURE [dbo].[sp_create_game]
+	(
+		@Title				varchar(250),
+		@GenreID			varchar(50),
+		@Description		varchar(500),
+		@Rating				varchar(15),
+		@MediumID			varchar(10),
+		@QuantityAvailable	int,
+		@Quantity			int,
+		@RentalPrice		decimal(7,2)
+	)
+AS
+	BEGIN
+		INSERT INTO	[dbo].[Games]
+			([Title], [GenreID], [Description], [Rating], [MediumID], [QuantityAvailable], [Quantity], [RentalPrice])
+		VALUES
+			(@Title, @GenreID, @Description, @Rating, @MediumID, @QuantityAvailable, @Quantity, @RentalPrice)
+		RETURN @@ROWCOUNT
+	END
+GO
+
 print '' print '**** Creating sp_authenticate_user ****'
 GO
 CREATE PROCEDURE [dbo].[sp_authenticate_user]
