@@ -8,3 +8,8 @@ G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\bin\Release\Laze
 G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
 G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
 G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb

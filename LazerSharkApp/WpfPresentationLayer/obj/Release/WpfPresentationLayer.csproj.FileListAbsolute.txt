@@ -171,3 +171,37 @@ C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\WpfPresentationLayer\obj\Relea
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.csproj.GenerateResource.Cache
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.exe
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\WpfPresentationLayer.exe.config
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\WpfPresentationLayer.exe
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\WpfPresentationLayer.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkDataObjects.dll
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkLogicLayer.dll
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkDataAccess.dll
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkLogicLayer.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\LazerSharkDataAccess.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.csprojResolveAssemblyReference.cache
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\ChangePassword.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminLogin.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminOrderUI.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminUI.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\ChangePassword.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\CheckOut.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\CreateAccount.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\Login.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\MainWindow.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\App.g.cs
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer_MarkupCompile.cache
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer_MarkupCompile.lref
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminLogin.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminOrderUI.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\AdminUI.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\CheckOut.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\CreateAccount.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\Login.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\MainWindow.baml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.g.resources
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.Properties.Resources.resources
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.csproj.GenerateResource.Cache
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.exe
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\obj\Release\WpfPresentationLayer.pdb

@@ -34,3 +34,12 @@ C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkLogicLayer\bin\Relea
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.csprojResolveAssemblyReference.cache
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.dll
 C:\Users\Vic\Desktop\LazerShark 2.0\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkLogicLayer.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkLogicLayer.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkDataAccess.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkDataObjects.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkDataAccess.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkDataObjects.pdb
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\obj\Release\LazerSharkLogicLayer.pdb
