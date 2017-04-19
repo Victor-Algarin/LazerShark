@@ -403,6 +403,51 @@ namespace LazerSharkDataAccess
                 
                 throw;
             }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
+        public static int UpdateGame(Game oldGame, Game newGame)
+        {
+            int result = 0;
+
+            var conn = DBConnection.GetConnection();
+            var cmdText = @"sp_edit_game";
+            var cmd = new SqlCommand(cmdText, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@GameID", oldGame.GameID);
+
+            cmd.Parameters.AddWithValue("@OldDescription", oldGame.Description);
+            cmd.Parameters.AddWithValue("@OldQuantity", oldGame.Quantity);
+            cmd.Parameters.AddWithValue("@OldQuantityAvailable", oldGame.QuantityAvailable);
+            cmd.Parameters.AddWithValue("@OldRentalPrice", oldGame.RentalPrice);
+            cmd.Parameters.AddWithValue("@OldActive", oldGame.Active);
+
+            cmd.Parameters.AddWithValue("@NewDescription", newGame.Description);
+            cmd.Parameters.AddWithValue("@NewQuantity", newGame.Quantity);
+            cmd.Parameters.AddWithValue("@NewQuantityAvailable", newGame.QuantityAvailable);
+            cmd.Parameters.AddWithValue("@NewRentalPrice", newGame.RentalPrice);
+            cmd.Parameters.AddWithValue("@NewActive", newGame.Active);
+
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
 
             return result;
         }

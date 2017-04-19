@@ -162,5 +162,19 @@ namespace LazerSharkLogicLayer
                 return false;
             }
         }
+
+
+        public bool EditGame(Game oldGame, Game newGame)
+        {
+            try
+            {
+                return (GameAccessor.UpdateGame(oldGame, newGame) == 1);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
     }
 }

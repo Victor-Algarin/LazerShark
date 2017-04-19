@@ -13,5 +13,6 @@ namespace LazerSharkLogicLayer
         System.Collections.Generic.List<LazerSharkDataObjects.Game> RetrieveGamesWithGenreAndMediumFilter(string genreId, string mediumId);
         System.Collections.Generic.List<LazerSharkDataObjects.Game> RetrieveSupplierGamesStock(int supplierId);
         bool CreateGame(Game game);
+        bool EditGame(Game oldGame, Game newGame);
     }
 }

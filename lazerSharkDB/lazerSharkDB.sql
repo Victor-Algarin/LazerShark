@@ -526,7 +526,36 @@ AS
 	END
 GO
 
-
+print '' print '**** Creating sp_edit_game ****'
+GO
+CREATE PROCEDURE [dbo].[sp_edit_game]
+	(
+		@GameID	int,
+		
+		@OldDescription varchar(500),
+		@NewDescription varchar(500),
+		@OldQuantity	int,
+		@NewQuantity	int,
+		@OldQuantityAvailable int, 
+		@NewQuantityAvailable int,
+		@OldRentalPrice decimal(7, 2),
+		@NewRentalPrice decimal(7, 2 ),
+		@OldActive bit, 
+		@NewActive bit
+	)
+AS
+	BEGIN
+		UPDATE Games
+			SET Description = @NewDescription,
+				Active = @NewActive,
+				RentalPrice = @NewRentalPrice,
+				Quantity = @NewQuantity,
+				QuantityAvailable = @NewQuantityAvailable
+			WHERE GameID = @GameID
+			AND Active = @OldActive
+		RETURN @@ROWCOUNT
+	END
+GO
 
 print '' print '**** Creating sp_add_user ****'
 GO

@@ -68,51 +68,67 @@ namespace MVCPresentationLayer.Controllers
             return View(game);
         }
 
-        //// GET: /Games/Edit/5
-        //public ActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Game game = db.Games.Find(id);
-        //    if (game == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(game);
-        //}
+        [Authorize(Roles="Administrator")]
+        // GET: /Games/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)id);
+            if (game == null)
+            {
+                return HttpNotFound();
+            }
+            return View(game);
+        }
 
-        //// POST: /Games/Edit/5
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include="GameID,Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Game game)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(game).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(game);
-        //}
+        // POST: /Games/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "GameID,Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Game newGame)
+        {
+            if (ModelState.IsValid)
+            {
+                var oldGame = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)newGame.GameID);
+                if (gamMgr.EditGame(oldGame, newGame) == true)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }                
+            }
+            return View(newGame);
+        }
 
-        //// GET: /Games/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Game game = db.Games.Find(id);
-        //    if (game == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(game);
-        //}
+        [Authorize(Roles="Administrator")]
+        // GET: /Games/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)id);
+
+            if (game == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                if (gamMgr.RemoveGamesFromKiosk(game.GameID) == true)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            return View(game);
+        }
 
         //// POST: /Games/Delete/5
         //[HttpPost, ActionName("Delete")]
