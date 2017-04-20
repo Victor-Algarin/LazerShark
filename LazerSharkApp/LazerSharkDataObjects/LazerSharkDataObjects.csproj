@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrator.cs" />
-    <Compile Include="CartManager.cs" />
     <Compile Include="CartLine.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Game.cs" />

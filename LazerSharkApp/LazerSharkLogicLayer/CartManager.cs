@@ -75,5 +75,15 @@ namespace LazerSharkDataObjects
             get { return lines; }
         }
 
+        //private CartManager GetCart()
+        //{
+        //    CartManager cart = (CartManager)Session["CartManager"];
+        //    if (cart == null)
+        //    {
+        //        cart = new CartManager();
+        //        Session["CartManager"] = cart;
+        //    }
+        //    return cart;
+        //}
     }
 }
