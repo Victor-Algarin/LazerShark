@@ -76,7 +76,7 @@
             @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
 
-            @using (Html.BeginForm("AddToCart", "Cart"))
+            @using (Html.BeginForm("Index", "Cart"))
             {
                 <div class="pull-right">
                     @Html.HiddenFor(modelItem => item.MovieID)

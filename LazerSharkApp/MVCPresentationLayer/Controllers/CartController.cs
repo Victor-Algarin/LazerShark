@@ -1,6 +1,7 @@
 ﻿
 using LazerSharkDataObjects;
 using LazerSharkLogicLayer;
+using MVCPresentationLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,11 +66,25 @@ namespace MVCPresentationLayer.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
+        private CartManager GetCart()
+        {
+            CartManager cart = (CartManager)Session["CartManager"];
+            if (cart == null)
+            {
+                cart = new CartManager();
+                Session["CartManager"] = cart;
+            }
+            return cart;
+        }
+
         [Authorize]
         // GET: Cart
-        public ActionResult Index()
+        public ViewResult Index(string returnUrl)
         {
-            return View();
+            return View(new CartIndexViewModel { 
+                Cart = GetCart(),
+                ReturnUrl = returnUrl
+            });
         }
     }
 }

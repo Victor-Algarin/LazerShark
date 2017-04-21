@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LazerSharkDataObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LazerSharkDataObjects
+namespace LazerSharkLogicLayer
 {
     public class CartManager
     {
@@ -75,15 +76,10 @@ namespace LazerSharkDataObjects
             get { return lines; }
         }
 
-        //private CartManager GetCart()
-        //{
-        //    CartManager cart = (CartManager)Session["CartManager"];
-        //    if (cart == null)
-        //    {
-        //        cart = new CartManager();
-        //        Session["CartManager"] = cart;
-        //    }
-        //    return cart;
-        //}
+        public CartLine getLine()
+        {
+            var line = new CartLine();
+            return line;
+        }
     }
 }
