@@ -7,7 +7,11 @@
 <h2>Movies</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Administrator"))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
+    
 </p>
 <table class="table">
     <tr>
@@ -35,9 +39,9 @@
         <th>
             @Html.DisplayNameFor(model => model.RentalPrice)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Active)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -67,14 +71,26 @@
         <td>
             @Html.DisplayFor(modelItem => item.RentalPrice)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Active)
-        </td>
+        </td>*@
 
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
+            @if (User.IsInRole("Administrator"))
+            {
+                
+                @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) 
+            }
+        </td>
+        <td>
+            @if (User.IsInRole("Administrator"))
+            {
+                @Html.ActionLink("Delete", "Delete", new { id=item.MovieID }) 
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.MovieID }) 
+            
 
             @using (Html.BeginForm("Index", "Cart"))
             {
