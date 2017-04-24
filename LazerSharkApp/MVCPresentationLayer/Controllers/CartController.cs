@@ -42,15 +42,15 @@ namespace MVCPresentationLayer.Controllers
         }
 
         [Authorize]
-        public RedirectToRouteResult AddGameToCart(int gameId, string returnUrl)
+        public RedirectToRouteResult AddGameToCart(int? id)
         {
-            Game game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)gameId);
+            Game game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)id);
 
             if (game != null)
             {
-                cart.AddGame(game, 1);
+                GetCart().AddGame(game, 1);
             }
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("Index");
         }
 
         [Authorize]

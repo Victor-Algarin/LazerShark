@@ -4,10 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Games</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Administrator"))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
+
 </p>
 <table class="table">
     <tr>
@@ -35,47 +39,67 @@
         <th>
             @Html.DisplayNameFor(model => model.RentalPrice)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Active)
-        </th>
-        <th></th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>*@
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GenreID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MediumID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QuantityAvailable)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RentalPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Active)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GameID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GameID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GameID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GenreID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediumID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentalPrice)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>*@
+            <td>
+                @if (User.IsInRole("Administrator"))
+                {
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.GameID })
+                }
+            </td>
+            <td>
+                @if (User.IsInRole("Administrator"))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.GameID })
+            </td>
+            <td>
+                @using (Html.BeginForm("AddGameToCart", "Cart", new { id = item.GameID }))
+                {
+                    <div class="pull-right">
+                        @Html.HiddenFor(modelItem => item.GameID)
+                        <input type="submit" class="btn btn-success" value="Add to cart" />
+                    </div>
+                }
+            </td>
+        </tr>
+    }
 
 </table>

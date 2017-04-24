@@ -17,12 +17,16 @@
     <tbody>
         @foreach (var line in Model.Cart.Lines)
         {
-            <tr>
-                <td class="text-center">@line.MovieQuantity</td>
-                <td class="text-left">@line.Movie.Title</td>
-                <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
-                <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
-            </tr>
+            if (line.Movie != null)
+            {
+                <tr>
+                    <td class="text-center">@line.MovieQuantity</td>
+                    <td class="text-left">@line.Movie.Title</td>
+                    <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
+                    <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
+                </tr>
+            }
+
         }
 
         @foreach (var line2 in Model.Cart.Lines)
