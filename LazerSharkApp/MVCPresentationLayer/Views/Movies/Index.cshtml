@@ -92,7 +92,7 @@
             @Html.ActionLink("Details", "Details", new { id=item.MovieID }) 
         </td>
         <td>
-            @using (Html.BeginForm("AddMovieToCart", "Cart"))
+            @using (Html.BeginForm("AddMovieToCart", "Cart", new { id = item.MovieID }))
             {
                 <div class="pull-right">
                     @Html.HiddenFor(modelItem => item.MovieID)

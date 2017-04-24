@@ -17,11 +17,11 @@ namespace LazerSharkLogicLayer
 
             if (line == null)
             {
-                lines.Add(new CartLine { Movie = movie, Quantity = quantity });
+                lines.Add(new CartLine { Movie = movie, MovieQuantity = quantity });
             }
             else
             {
-                line.Quantity += quantity;
+                line.MovieQuantity += quantity;
             }
         }
 
@@ -31,11 +31,11 @@ namespace LazerSharkLogicLayer
 
             if (line == null)
             {
-                lines.Add(new CartLine { Game = game, Quantity = quantity });
+                lines.Add(new CartLine { Game = game, GameQuantity = quantity });
             }
             else
             {
-                line.Quantity += quantity;
+                line.GameQuantity += quantity;
             }
         }
 
@@ -51,12 +51,29 @@ namespace LazerSharkLogicLayer
 
         public decimal CalculateTotalMoviePrice()
         {
-            return lines.Sum(m => m.Movie.RentalPrice * m.Quantity);
+            decimal price = 0;
+            try
+            {
+                price = lines.Sum(m => m.Movie.RentalPrice * m.MovieQuantity);
+            }
+            catch (Exception)
+            {
+            }
+            return price;
+
         }
 
         public decimal CalculateTotalGamePrice()
         {
-            return lines.Sum(g => g.Game.RentalPrice * g.Quantity);
+            decimal price = 0;
+            try
+            {
+                price = lines.Sum(g => g.Game.RentalPrice * g.GameQuantity);
+            }
+            catch (Exception)
+            {
+            }
+            return price;
         }
 
         public decimal CalculateTotalValue()
@@ -80,7 +97,8 @@ namespace LazerSharkLogicLayer
         {
             public Movie Movie { get; set; }
             public Game Game { get; set; }
-            public int Quantity { get; set; }
+            public int MovieQuantity { get; set; }
+            public int GameQuantity { get; set; }
         }
 
     }
