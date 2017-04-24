@@ -23,3 +23,8 @@ C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\Laz
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll.config
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.xml
+C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.xml

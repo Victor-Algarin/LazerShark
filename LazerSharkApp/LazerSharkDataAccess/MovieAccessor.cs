@@ -460,5 +460,51 @@ namespace LazerSharkDataAccess
 
             return count;
         }
+
+        public static Movie GetMovieByID(Movie movieParam)
+        {
+            Movie movie = null;
+
+            var conn = DBConnection.GetConnection();
+            var cmdText = @"sp_retrieve_movie_by_id";
+            var cmd = new SqlCommand(cmdText, conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MovieID", movieParam.MovieID);
+
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        movie.MovieID = reader.GetInt32(0);
+                        movie.Title = reader.GetString(1);
+                        movie.GenreID = reader.GetString(2);
+                        movie.Description = reader.GetString(3);
+                        movie.Rating = reader.GetString(4);
+                        movie.MediumID = reader.GetString(5);
+                        movie.QuantityAvailable = reader.GetInt32(6);
+                        movie.Quantity = reader.GetInt32(7);
+                        movie.RentalPrice = reader.GetDecimal(8);
+                        movie.Active = reader.GetBoolean(9);
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return movie;
+        }
     }
 }

@@ -76,10 +76,12 @@ namespace LazerSharkLogicLayer
             get { return lines; }
         }
 
-        public CartLine getLine()
+        public class CartLine
         {
-            var line = new CartLine();
-            return line;
+            public Movie Movie { get; set; }
+            public Game Game { get; set; }
+            public int Quantity { get; set; }
         }
+
     }
 }

@@ -477,6 +477,20 @@ AS
 		WHERE Username = @Username
 	END
 GO
+
+print '' print '**** Creating sp_retrieve_movie_by_id ****'
+GO
+CREATE PROCEDURE [dbo].[sp_retrieve_movie_by_id]
+	{
+	@MovieID int
+	}
+AS
+	BEGIN
+		SELECT MovieID, Title, GenreID, Description, Rating, MediumID, QuantityAvailable, Quantity, RentalPrice, Active
+		FROM Movies
+		WHERE MovieID = @MovieID
+	END
+GO
 	
 print '' print '**** Creating sp_update_passwordHash ****'
 GO

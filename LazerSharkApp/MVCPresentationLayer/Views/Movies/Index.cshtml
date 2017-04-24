@@ -90,13 +90,13 @@
         </td>
         <td>
             @Html.ActionLink("Details", "Details", new { id=item.MovieID }) 
-            
-
-            @using (Html.BeginForm("Index", "Cart"))
+        </td>
+        <td>
+            @using (Html.BeginForm("AddMovieToCart", "Cart"))
             {
                 <div class="pull-right">
                     @Html.HiddenFor(modelItem => item.MovieID)
-                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    @*@Html.Hidden("returnUrl", Request.Url.PathAndQuery)*@
                     <input type="submit" class="btn btn-success" value="Add to cart" />
                 </div>
             }

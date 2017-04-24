@@ -15,5 +15,6 @@ namespace LazerSharkLogicLayer
         List<LazerSharkDataObjects.Movie> RetrieveMoviesWithGenreAndMedium(string genreId, string mediumId);
         bool CreateNewMovie(Movie moive);
         bool EditMovie(Movie oldMovie, Movie newMovie);
+        Movie RetrieveMovieByID(Movie movie);
     }
 }

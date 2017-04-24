@@ -318,3 +318,14 @@ C:\Users\nh229u22\LazerShark\LazerSharkApp\MVCPresentationLayer\obj\Release\MVCP
 C:\Users\nh229u22\LazerShark\LazerSharkApp\MVCPresentationLayer\obj\Release\MVCPresentationLayer.csproj.GenerateResource.Cache
 C:\Users\nh229u22\LazerShark\LazerSharkApp\MVCPresentationLayer\obj\Release\MVCPresentationLayer.dll
 C:\Users\nh229u22\LazerShark\LazerSharkApp\MVCPresentationLayer\obj\Release\MVCPresentationLayer.pdb
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Castle.Core.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Moq.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.Web.Common.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.Web.Mvc.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\WebActivatorEx.dll
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Castle.Core.xml
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Moq.xml
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.xml
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.Web.Common.xml
+C:\Users\Vic\LazerShark\LazerSharkApp\MVCPresentationLayer\bin\Ninject.Web.Mvc.xml

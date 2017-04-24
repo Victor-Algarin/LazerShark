@@ -1,5 +1,6 @@
 ﻿
 using LazerSharkDataObjects;
+using LazerSharkDataObjects.Abstract;
 using LazerSharkLogicLayer;
 using MVCPresentationLayer.Models;
 using System;
@@ -18,15 +19,25 @@ namespace MVCPresentationLayer.Controllers
         CartManager cart = new CartManager();
 
         [Authorize]
-        public RedirectToRouteResult AddMovieToCart(int movieId, string returnUrl)
-        {            
-            Movie movie = movMgr.RetrieveMoviesForRent().Find(m => m.MovieID == (int)movieId);
+        // GET: Cart
+        public ViewResult Index(string returnUrl)
+        {
+            return View(new CartIndexViewModel { 
+                Cart = GetCart(),
+                ReturnUrl = returnUrl
+            });
+        }
+
+        [Authorize]
+        public RedirectToRouteResult AddMovieToCart(int? id)
+        {
+            Movie movie = movMgr.RetrieveMoviesForRent().Find(m => m.MovieID == (int)id);
 
             if (movie != null)
             {
-                cart.AddMovie(movie, 1);
+                GetCart().AddMovie(movie, 1);
             }
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("Index");
 
         }
 
@@ -77,14 +88,6 @@ namespace MVCPresentationLayer.Controllers
             return cart;
         }
 
-        [Authorize]
-        // GET: Cart
-        public ViewResult Index(string returnUrl)
-        {
-            return View(new CartIndexViewModel { 
-                Cart = GetCart(),
-                ReturnUrl = returnUrl
-            });
-        }
+
     }
 }

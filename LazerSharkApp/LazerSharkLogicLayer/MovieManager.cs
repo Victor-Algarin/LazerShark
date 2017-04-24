@@ -11,7 +11,7 @@ namespace LazerSharkLogicLayer
     public class MovieManager : IMovieManager
     {
         public List<Movie> movies = new List<Movie>();
-
+        public Movie movie;
         public List<Movie> RetrieveMoviesForRent()
         {
             try
@@ -174,5 +174,19 @@ namespace LazerSharkLogicLayer
         }
 
 
+
+
+        public Movie RetrieveMovieByID(Movie movie)
+        {
+            try
+            {
+                movie = MovieAccessor.GetMovieByID(movie);
+            }
+            catch (Exception)
+            {
+
+            }
+            return movie;
+        }
     }
 }
