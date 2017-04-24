@@ -24,6 +24,19 @@
                 <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
             </tr>
         }
+
+        @foreach (var line2 in Model.Cart.Lines)
+        {
+            if (line2.Game != null)
+            {
+                <tr>
+                    <td class="text-center">@line2.GameQuantity</td>
+                    <td class="text-left">@line2.Game.Title</td>
+                    <td class="text-right">@line2.Game.RentalPrice.ToString("c")</td>
+                    <td class="text-right">@((line2.GameQuantity * line2.Game.RentalPrice).ToString("c"))</td>
+                </tr>
+            }
+        }
     </tbody>
     <tfoot>
         <tr>
