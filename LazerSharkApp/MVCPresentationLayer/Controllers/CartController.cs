@@ -54,15 +54,15 @@ namespace MVCPresentationLayer.Controllers
         }
 
         [Authorize]
-        public RedirectToRouteResult RemoveMovieFromCart(int movieId, string returnUrl)
+        public RedirectToRouteResult RemoveMovieFromCart(int? movieId)
         {
             Movie movie = movMgr.RetrieveMoviesForRent().Find(m => m.MovieID == (int)movieId);
 
             if (movie != null)
             {
-                cart.RemoveMovie(movie);
+                GetCart().RemoveMovie(movie);
             }
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("Index");
         }
 
         [Authorize]
@@ -86,6 +86,11 @@ namespace MVCPresentationLayer.Controllers
                 Session["CartManager"] = cart;
             }
             return cart;
+        }
+
+        public PartialViewResult Summary(CartManager cart)
+        {
+            return PartialView(cart);
         }
 
 

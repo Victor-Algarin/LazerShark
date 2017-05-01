@@ -1,0 +1,12 @@
+﻿@model MVCPresentationLayer.Models.CartIndexViewModel
+
+
+<div class="navbar-right">
+    @Html.ActionLink("Checkout", "Index", "Cart",
+            new { @class = "btn btn-default navbar-btn"})
+</div>
+<div class="navbar-text navbar-right">
+    <b>Your Cart:</b>
+    @Model.Cart.Lines.Sum(x => x.MovieQuantity) item(s),
+    @Model.Cart.CalculateTotalValue().ToString("c")
+</div>

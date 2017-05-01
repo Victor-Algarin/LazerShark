@@ -24,6 +24,13 @@
                     <td class="text-left">@line.Movie.Title</td>
                     <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
                     <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveMovieFromCart", "Cart"))
+                        {
+                            @Html.Hidden("MovieId", line.Movie.MovieID)
+                            <input class="btn btn-sm btn-warning" type="submit" value="Remove"/>
+                        }
+                    </td>
                 </tr>
             }
 
@@ -51,6 +58,6 @@
 </table>
 
 <div class="text-center">
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+    <a class="btn btn-primary" href="..">Continue Shopping</a>
 </div>
 
