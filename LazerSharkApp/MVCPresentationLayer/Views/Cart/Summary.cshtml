@@ -1,4 +1,4 @@
-﻿@model MVCPresentationLayer.Models.CartIndexViewModel
+﻿@model LazerSharkLogicLayer.CartManager
 
 
 <div class="navbar-right">
@@ -7,6 +7,9 @@
 </div>
 <div class="navbar-text navbar-right">
     <b>Your Cart:</b>
-    @Model.Cart.Lines.Sum(x => x.MovieQuantity) item(s),
-    @Model.Cart.CalculateTotalValue().ToString("c")
+    @Model.Lines.Sum(x => x.MovieQuantity) item(s),
+    @Model.CalculateTotalValue().ToString("c")
+
+    @*@Model.Cart.Lines.Sum(x => x.MovieQuantity) item(s),
+    @Model.Cart.CalculateTotalValue().ToString("c")*@
 </div>

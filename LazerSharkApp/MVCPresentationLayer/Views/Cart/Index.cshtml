@@ -45,6 +45,13 @@
                     <td class="text-left">@line2.Game.Title</td>
                     <td class="text-right">@line2.Game.RentalPrice.ToString("c")</td>
                     <td class="text-right">@((line2.GameQuantity * line2.Game.RentalPrice).ToString("c"))</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveGameFromCart", "Cart"))
+                        {
+                            @Html.Hidden("GameId", line2.Game.GameID)
+                            <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
+                        }
+                    </td>
                 </tr>
             }
         }
