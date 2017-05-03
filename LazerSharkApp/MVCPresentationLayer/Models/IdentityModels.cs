@@ -30,6 +30,8 @@ namespace MVCPresentationLayer.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<MVCPresentationLayer.Models.CheckoutModel> CheckoutModels { get; set; }
+
        
     }
 }

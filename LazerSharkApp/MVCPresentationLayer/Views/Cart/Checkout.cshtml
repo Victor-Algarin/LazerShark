@@ -1,0 +1,18 @@
+﻿@model MVCPresentationLayer.Models.CheckoutModel
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+<div>
+    <h4>CheckoutModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.checkoutId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
