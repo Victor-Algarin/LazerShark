@@ -97,7 +97,7 @@ namespace MVCPresentationLayer.Controllers
         {
 
             CheckoutModel model = new CheckoutModel() {};
-            var cart = GetCart();
+            
             
             foreach (var item in cart.Lines)
             {
@@ -108,7 +108,10 @@ namespace MVCPresentationLayer.Controllers
             //    model.games.Add(item.Game);
             //}
 
-            return View(model);
+            return View(new CartIndexViewModel
+            {
+                Cart = GetCart()
+            });
         }
 
 

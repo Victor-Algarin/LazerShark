@@ -1,34 +1,68 @@
-﻿@model MVCPresentationLayer.Models.CheckoutModel
+﻿@model MVCPresentationLayer.Models.CartIndexViewModel
 
 @{
-    ViewBag.Title = "Checkout";
+    ViewBag.Title = "Index";
 }
 
-<h2>Checkout</h2>
+<h2>Check Out</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            if (line.Movie != null)
+            {
+                <tr>
+                    <td class="text-center">@line.MovieQuantity</td>
+                    <td class="text-left">@line.Movie.Title</td>
+                    <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
+                    <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveMovieFromCart", "Cart"))
+                        {
+                            @Html.Hidden("MovieId", line.Movie.MovieID)
+                            <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
+                        }
+                    </td>
+                </tr>
+            }
 
-<div>
-    <h4>CheckoutModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-    @foreach (var item in Model.Movies)
-    {
-        <dt>
-            @Html.DisplayNameFor(model => item.Title)
-        </dt>
+        }
 
-        <dd>
-            @Html.DisplayFor(model => item.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => item.RentalPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => item.RentalPrice)
-        </dd>
-    </dl>
-    }
+        @foreach (var line2 in Model.Cart.Lines)
+        {
+            if (line2.Game != null)
+            {
+                <tr>
+                    <td class="text-center">@line2.GameQuantity</td>
+                    <td class="text-left">@line2.Game.Title</td>
+                    <td class="text-right">@line2.Game.RentalPrice.ToString("c")</td>
+                    <td class="text-right">@((line2.GameQuantity * line2.Game.RentalPrice).ToString("c"))</td>
+                    <td>
+                        @using (Html.BeginForm("RemoveGameFromCart", "Cart"))
+                        {
+                            @Html.Hidden("GameId", line2.Game.GameID)
+                            <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">@Model.Cart.CalculateTotalValue().ToString("c")</td>
+        </tr>
+    </tfoot>
+</table>
         
 </div>
 <p>
