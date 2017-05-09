@@ -89,6 +89,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
+            @Html.HiddenFor(x => x.MovieID)
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>

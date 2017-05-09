@@ -1,4 +1,4 @@
-﻿using LazerSharkLogicLayer;
+﻿using MVCPresentationLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,6 @@ namespace MVCPresentationLayer.Models
 {
     public class CartIndexViewModel
     {
-        public CartManager Cart { get; set; }
-        public string ReturnUrl { get; set; }
+        public Cart Cart { get; set; }
     }
 }

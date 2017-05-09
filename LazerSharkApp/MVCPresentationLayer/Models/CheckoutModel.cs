@@ -11,8 +11,8 @@ namespace MVCPresentationLayer.Models
     {
         [Key]
         public int checkoutId { get; set; }
-        public List<Movie> movies { get; set; }
+        public List<Movie> Movies { get; set; }
 
-        public List<Game> games { get; set; }
+        public List<Game> Games { get; set; }
     }
 }

@@ -46,13 +46,13 @@ namespace MVCPresentationLayer.Controllers
         // POST: Movies/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost] 
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles="Administrator")]
-        public ActionResult Create([Bind(Include = "Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Movie movie)
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Create([Bind(Include = "MovieID,Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Movie movie)
         {
             if (ModelState.IsValid)
-            {       
+            {
                 if (movMgr.CreateNewMovie(movie) == true)
                 {
                     // Opens index
@@ -68,7 +68,7 @@ namespace MVCPresentationLayer.Controllers
             return View(movie);
         }
 
-        [Authorize(Roles="Administrator")]
+        [Authorize(Roles = "Administrator")]
         // GET: Movies/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -126,32 +126,24 @@ namespace MVCPresentationLayer.Controllers
             }
             else
             {
-                if (movMgr.RemoveMovieFromKiosk(movie.MovieID))
-                {
-                    return RedirectToAction("Index");
-                }
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View(movie);
             }
         }
 
-        //// POST: Movies/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    Movie movie = db.Movies.Find(id);
-        //    db.Movies.Remove(movie);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+        // POST: Movies/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed([Bind(Include = "MovieID,Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Movie movie)
+        {
 
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing)
-        //    {
-        //        db.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
+            if (movMgr.RemoveMovieFromKiosk(movie.MovieID))
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.ServiceUnavailable);
+            }
+        }
     }
 }

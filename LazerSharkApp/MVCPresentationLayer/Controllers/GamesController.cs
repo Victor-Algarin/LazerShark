@@ -114,6 +114,7 @@ namespace MVCPresentationLayer.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             var game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)id);
 
             if (game == null)
@@ -122,32 +123,23 @@ namespace MVCPresentationLayer.Controllers
             }
             else
             {
-                if (gamMgr.RemoveGamesFromKiosk(game.GameID) == true)
-                {
-                    return RedirectToAction("Index");
-                }
+                return View(game);
             }
-            return View(game);
         }
 
-        //// POST: /Games/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    Game game = db.Games.Find(id);
-        //    db.Games.Remove(game);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing)
-        //    {
-        //        db.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
+        // POST: /Games/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed([Bind(Include = "GameID,Title,GenreID,Description,Rating,MediumID,QuantityAvailable,Quantity,RentalPrice,Active")] Game game)
+        {
+            if (gamMgr.RemoveGamesFromKiosk(game.GameID))
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.ServiceUnavailable);
+            }
+        }
     }
 }

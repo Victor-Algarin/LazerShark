@@ -2,6 +2,7 @@
 using LazerSharkDataObjects;
 using LazerSharkDataObjects.Abstract;
 using LazerSharkLogicLayer;
+using MVCPresentationLayer.Entities;
 using MVCPresentationLayer.Models;
 using System;
 using System.Collections.Generic;
@@ -16,15 +17,14 @@ namespace MVCPresentationLayer.Controllers
         IMovieManager movMgr = new MovieManager();
         IGameManager gamMgr = new GameManager();
 
-        CartManager cart = new CartManager();
+        Cart cart = new Cart();
 
         [Authorize]
         // GET: Cart
-        public ViewResult Index(string returnUrl)
+        public ViewResult Index()
         {
             return View(new CartIndexViewModel { 
-                Cart = GetCart(),
-                ReturnUrl = returnUrl
+                Cart = GetCart()
             });
         }
 
@@ -66,7 +66,7 @@ namespace MVCPresentationLayer.Controllers
         }
 
         [Authorize]
-        public RedirectToRouteResult RemoveGameFromCart(int gameId, string returnUrl)
+        public RedirectToRouteResult RemoveGameFromCart(int? gameId)
         {
             Game game = gamMgr.RetrieveGamesForRental().Find(g => g.GameID == (int)gameId);
 
@@ -74,28 +74,41 @@ namespace MVCPresentationLayer.Controllers
             {
                 cart.RemoveGame(game);
             }
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("Index");
         }
 
-        private CartManager GetCart()
+        private Cart GetCart()
         {
-            CartManager cart = (CartManager)Session["CartManager"];
+            Cart cart = (Cart)Session["CartManager"];
             if (cart == null)
             {
-                cart = new CartManager();
+                cart = new Cart();
                 Session["CartManager"] = cart;
             }
             return cart;
         }
 
-        public PartialViewResult Summary(CartManager cart)
+        public PartialViewResult Summary(Cart cart)
         {
             return PartialView(cart);
         }
 
         public ViewResult Checkout()
         {
-            return View(new CheckoutModel());
+
+            CheckoutModel model = new CheckoutModel() {};
+            var cart = GetCart();
+            
+            foreach (var item in cart.Lines)
+            {
+                model.Movies.Add(item.Movie);
+            }
+            //foreach (var item in cart.Lines)
+            //{
+            //    model.games.Add(item.Game);
+            //}
+
+            return View(model);
         }
 
 

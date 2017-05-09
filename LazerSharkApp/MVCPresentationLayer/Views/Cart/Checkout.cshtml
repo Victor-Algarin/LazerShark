@@ -10,9 +10,27 @@
     <h4>CheckoutModel</h4>
     <hr />
     <dl class="dl-horizontal">
+    @foreach (var item in Model.Movies)
+    {
+        <dt>
+            @Html.DisplayNameFor(model => item.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.RentalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.RentalPrice)
+        </dd>
     </dl>
+    }
+        
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.checkoutId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
