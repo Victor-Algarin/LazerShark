@@ -4,7 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2 style="color:white">Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -89,7 +89,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @Html.HiddenFor(x => x.GameID)
             @Html.ActionLink("Back to List", "Index")
         </div>

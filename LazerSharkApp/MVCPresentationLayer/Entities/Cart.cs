@@ -22,15 +22,15 @@ namespace MVCPresentationLayer.Entities
                     {
                         line.MovieQuantity += quantity;
                         isPresent = true;
-                    }                    
+                    }
                 }
-                
+
             }
             if (isPresent == false)
             {
                 lines.Add(new CartLine { Movie = movie, MovieQuantity = quantity });
             }
-            
+
 
         }
 
@@ -56,13 +56,23 @@ namespace MVCPresentationLayer.Entities
 
         public void RemoveMovie(Movie movie)
         {
-            foreach (var line in lines)
+            if (lines.Count <= 1)
             {
-                if (line.Movie != null)
+                lines.RemoveAll(m => m.Movie.MovieID == movie.MovieID);
+            }
+            else
+            {
+                foreach (var line in lines)
                 {
-                    lines.RemoveAll(m => m.Movie.MovieID == movie.MovieID);
+                    if (line.Movie != null)
+                    {
+                        lines.Remove(new CartLine { Movie = movie });
+
+                    }
                 }
-            }            
+            }
+
+
         }
 
         public void RemoveGame(Game game)
@@ -76,34 +86,34 @@ namespace MVCPresentationLayer.Entities
             int movieQuantity = 0;
             //try
             //{
-                //foreach (var item in lines)
-                //{
-                //    if (item.Movie != null)
-                //    {
-                //        price += item
-                //    }
-                //    else
-                //    {
+            //foreach (var item in lines)
+            //{
+            //    if (item.Movie != null)
+            //    {
+            //        price += item
+            //    }
+            //    else
+            //    {
 
-                //    }
-                //}
+            //    }
+            //}
 
-                //foreach (var line in lines)
-                //{
-                //    if (line.Movie != null)
-                //    {
-                //        for(int i = 1; i < lines.Count; i++)
-                //        {
-                //            if (lines[i].Movie != null)
-                //            {
-                //                if (lines[i].Movie.MovieID == line.Movie.MovieID)
-                //                {
-                //                    movieQuantity++;
-                //                }
-                //            }
-                //        }
-                //        price += line.Movie.RentalPrice * movieQuantity;
-                //    }
+            //foreach (var line in lines)
+            //{
+            //    if (line.Movie != null)
+            //    {
+            //        for(int i = 1; i < lines.Count; i++)
+            //        {
+            //            if (lines[i].Movie != null)
+            //            {
+            //                if (lines[i].Movie.MovieID == line.Movie.MovieID)
+            //                {
+            //                    movieQuantity++;
+            //                }
+            //            }
+            //        }
+            //        price += line.Movie.RentalPrice * movieQuantity;
+            //    }
 
             //    }
             //}
