@@ -72,7 +72,7 @@ namespace MVCPresentationLayer.Controllers
 
             if (game != null)
             {
-                cart.RemoveGame(game);
+                GetCart().RemoveGame(game);
             }
             return RedirectToAction("Index");
         }

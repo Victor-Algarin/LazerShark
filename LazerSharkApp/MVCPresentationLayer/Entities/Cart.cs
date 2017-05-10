@@ -67,7 +67,6 @@ namespace MVCPresentationLayer.Entities
                     if (line.Movie != null)
                     {
                         lines.Remove(new CartLine { Movie = movie });
-
                     }
                 }
             }
@@ -77,51 +76,35 @@ namespace MVCPresentationLayer.Entities
 
         public void RemoveGame(Game game)
         {
-            lines.RemoveAll(g => g.Game.GameID == game.GameID);
+
+            if (lines.Count <= 1)
+            {
+                lines.RemoveAll(g => g.Game.GameID == game.GameID);
+            }
+            else
+            {
+                foreach (var line in lines)
+                {
+                    if (line.Movie != null)
+                    {
+                        lines.Remove(new CartLine { Game = game });
+                    }
+                }
+            }
         }
 
         public decimal CalculateTotalMoviePrice()
         {
             decimal price = 0;
-            int movieQuantity = 0;
-            //try
-            //{
-            //foreach (var item in lines)
-            //{
-            //    if (item.Movie != null)
-            //    {
-            //        price += item
-            //    }
-            //    else
-            //    {
-
-            //    }
-            //}
-
-            //foreach (var line in lines)
-            //{
-            //    if (line.Movie != null)
-            //    {
-            //        for(int i = 1; i < lines.Count; i++)
-            //        {
-            //            if (lines[i].Movie != null)
-            //            {
-            //                if (lines[i].Movie.MovieID == line.Movie.MovieID)
-            //                {
-            //                    movieQuantity++;
-            //                }
-            //            }
-            //        }
-            //        price += line.Movie.RentalPrice * movieQuantity;
-            //    }
-
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //}
+            try
+            {
+                price = lines.Sum(m => m.Movie.RentalPrice * m.MovieQuantity);
+            }
+            catch (Exception)
+            {
+            }
             return price;
-
+           
         }
 
         public decimal CalculateTotalGamePrice()
@@ -129,14 +112,7 @@ namespace MVCPresentationLayer.Entities
             decimal price = 0;
             try
             {
-                foreach (var line in lines)
-                {
-                    if (line.Game != null)
-                    {
-                        price += line.Game.RentalPrice * line.Game.Quantity;
-                    }
-
-                }
+                price = lines.Sum(m => m.Game.RentalPrice * m.GameQuantity);
             }
             catch (Exception)
             {

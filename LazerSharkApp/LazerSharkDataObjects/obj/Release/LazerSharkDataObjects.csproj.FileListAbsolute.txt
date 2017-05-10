@@ -37,3 +37,4 @@ C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\Entit
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.xml
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
