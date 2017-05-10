@@ -1,5 +1,7 @@
 ﻿@model MVCPresentationLayer.Models.CartIndexViewModel
 
+<script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -23,7 +25,7 @@
                     <td class="text-center">@line.MovieQuantity</td>
                     <td class="text-left">@line.Movie.Title</td>
                     <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
-                    <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
+                    <td class="text-right" id="movieSub">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
                     <td>
                         @using (Html.BeginForm("RemoveMovieFromCart", "Cart"))
                         {
@@ -44,7 +46,7 @@
                     <td class="text-center">@line2.GameQuantity</td>
                     <td class="text-left">@line2.Game.Title</td>
                     <td class="text-right">@line2.Game.RentalPrice.ToString("c")</td>
-                    <td class="text-right">@((line2.GameQuantity * line2.Game.RentalPrice).ToString("c"))</td>
+                    <td class="text-right" id="gameSub">@((line2.GameQuantity * line2.Game.RentalPrice).ToString("c"))</td>
                     <td>
                         @using (Html.BeginForm("RemoveGameFromCart", "Cart"))
                         {
@@ -59,7 +61,7 @@
     <tfoot>
         <tr>
             <td colspan="3" class="text-right">Total:</td>
-            <td class="text-right">@Model.Cart.CalculateTotalValue().ToString("c")</td>
+            <td class="text-right" id="total">@*@Model.Cart.CalculateTotalValue().ToString("c")*@</td>
         </tr>
     </tfoot>
 </table>
@@ -70,3 +72,26 @@
     @Html.ActionLink("Checkout now", "Checkout",  null, new { @class = "btn btn-primary"})
 </div>
 
+@section Scripts{
+
+
+
+    <script type="text/javascript">
+        $.noConflict();
+
+        $(document).ready(function () {
+            var totalAll = 0;
+            var gamePrice = $("#gameSub").val();
+            var moviePrice = $("#movieSub").val();
+            total = gamePrice + moviePrice;
+            $("#total").val(totalAll);
+            alert(gamePrice);
+        });
+
+
+
+
+    </script>
+
+
+}

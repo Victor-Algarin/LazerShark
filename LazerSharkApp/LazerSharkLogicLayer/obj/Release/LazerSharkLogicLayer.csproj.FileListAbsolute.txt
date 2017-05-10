@@ -71,3 +71,8 @@ C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\Enti
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.xml
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\LazerSharkLogicLayer.dll.config
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.xml
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkLogicLayer\bin\Release\EntityFramework.SqlServer.xml

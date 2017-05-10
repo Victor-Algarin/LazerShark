@@ -10,7 +10,6 @@ G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\Laze
 G:\DotNetIII\LazerShark 2.0\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.pdb
-C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.csprojResolveAssemblyReference.cache
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.dll
 C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\obj\Release\LazerSharkDataObjects.pdb
 C:\Users\Vic\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll
@@ -33,3 +32,8 @@ C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\Ent
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.xml
 C:\Users\nh229u22\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\LazerSharkDataObjects.dll.config
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.xml
+C:\Users\victor\LazerShark\LazerSharkApp\LazerSharkDataObjects\bin\Release\EntityFramework.SqlServer.xml

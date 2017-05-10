@@ -13,35 +13,56 @@ namespace MVCPresentationLayer.Entities
 
         public void AddMovie(Movie movie, int quantity)
         {
-            CartLine line = lines.Where(m => m.Movie.MovieID == movie.MovieID).FirstOrDefault();
-
-            if (line == null)
+            bool isPresent = false;
+            foreach (var line in lines)
+            {
+                if (line.Movie != null)
+                {
+                    if (line.Movie.MovieID == movie.MovieID)
+                    {
+                        line.MovieQuantity += quantity;
+                        isPresent = true;
+                    }                    
+                }
+                
+            }
+            if (isPresent == false)
             {
                 lines.Add(new CartLine { Movie = movie, MovieQuantity = quantity });
             }
-            else
-            {
-                line.MovieQuantity += quantity;
-            }
+            
+
         }
 
         public void AddGame(Game game, int quantity)
         {
-            CartLine line = lines.Where(g => g.Game.GameID == game.GameID).FirstOrDefault();
-
-            if (line == null)
+            bool isPresent = false;
+            foreach (var line in lines)
+            {
+                if (line.Game != null)
+                {
+                    if (line.Game.GameID == game.GameID)
+                    {
+                        line.GameQuantity += quantity;
+                        isPresent = true;
+                    }
+                }
+            }
+            if (isPresent == false)
             {
                 lines.Add(new CartLine { Game = game, GameQuantity = quantity });
-            }
-            else
-            {
-                line.GameQuantity += quantity;
             }
         }
 
         public void RemoveMovie(Movie movie)
         {
-            lines.RemoveAll(m => m.Movie.MovieID == movie.MovieID);
+            foreach (var line in lines)
+            {
+                if (line.Movie != null)
+                {
+                    lines.RemoveAll(m => m.Movie.MovieID == movie.MovieID);
+                }
+            }            
         }
 
         public void RemoveGame(Game game)
@@ -52,13 +73,43 @@ namespace MVCPresentationLayer.Entities
         public decimal CalculateTotalMoviePrice()
         {
             decimal price = 0;
-            try
-            {
-                price = lines.Sum(m => m.Movie.RentalPrice * m.MovieQuantity);
-            }
-            catch (Exception)
-            {
-            }
+            int movieQuantity = 0;
+            //try
+            //{
+                //foreach (var item in lines)
+                //{
+                //    if (item.Movie != null)
+                //    {
+                //        price += item
+                //    }
+                //    else
+                //    {
+
+                //    }
+                //}
+
+                //foreach (var line in lines)
+                //{
+                //    if (line.Movie != null)
+                //    {
+                //        for(int i = 1; i < lines.Count; i++)
+                //        {
+                //            if (lines[i].Movie != null)
+                //            {
+                //                if (lines[i].Movie.MovieID == line.Movie.MovieID)
+                //                {
+                //                    movieQuantity++;
+                //                }
+                //            }
+                //        }
+                //        price += line.Movie.RentalPrice * movieQuantity;
+                //    }
+
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //}
             return price;
 
         }
@@ -68,7 +119,14 @@ namespace MVCPresentationLayer.Entities
             decimal price = 0;
             try
             {
-                price = lines.Sum(g => g.Game.RentalPrice * g.GameQuantity);
+                foreach (var line in lines)
+                {
+                    if (line.Game != null)
+                    {
+                        price += line.Game.RentalPrice * line.Game.Quantity;
+                    }
+
+                }
             }
             catch (Exception)
             {

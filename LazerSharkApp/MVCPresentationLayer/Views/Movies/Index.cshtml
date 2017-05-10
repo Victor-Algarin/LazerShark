@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Movies</h2>
+<h2 style="color:white;">Movies</h2>
 
 <p>
     @if (User.IsInRole("Administrator"))
@@ -13,7 +13,7 @@
     }
     
 </p>
-<table class="table white">
+<table class="table table-striped white" >
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -42,6 +42,9 @@
         @*<th>
             @Html.DisplayNameFor(model => model.Active)
         </th>*@
+        <th></th>
+        <th></th>
+        <th></th>
         <th></th>
     </tr>
 

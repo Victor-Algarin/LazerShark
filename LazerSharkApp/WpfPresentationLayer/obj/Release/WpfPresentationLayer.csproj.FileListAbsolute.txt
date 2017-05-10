@@ -277,3 +277,5 @@ C:\Users\Vic\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFra
 C:\Users\Vic\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFramework.xml
 C:\Users\nh229u22\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFramework.dll
 C:\Users\nh229u22\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFramework.xml
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFramework.dll
+C:\Users\victor\LazerShark\LazerSharkApp\WpfPresentationLayer\bin\Release\EntityFramework.xml

@@ -4,7 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Check Out</h2>
+<h2>Success!</h2>
+<h3>The following item(s) have been reserved for rental:</h3>
 <table>
     <thead>
         <tr>
@@ -12,6 +13,7 @@
             <th>Item</th>
             <th class="text-right">Price</th>
             <th class="text-right">Subtotal</th>
+            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -24,13 +26,13 @@
                     <td class="text-left">@line.Movie.Title</td>
                     <td class="text-right">@line.Movie.RentalPrice.ToString("c")</td>
                     <td class="text-right">@((line.MovieQuantity * line.Movie.RentalPrice).ToString("c"))</td>
-                    <td>
+                    @*<td>
                         @using (Html.BeginForm("RemoveMovieFromCart", "Cart"))
                         {
                             @Html.Hidden("MovieId", line.Movie.MovieID)
                             <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
                         }
-                    </td>
+                    </td>*@
                 </tr>
             }
 
@@ -68,3 +70,4 @@
 <p>
     @Html.ActionLink("Back to List", "Index")
 </p>
+
